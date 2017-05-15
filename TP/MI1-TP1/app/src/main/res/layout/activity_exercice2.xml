@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_exercice2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="mi1.mi1_tp1.Exercice2Activity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="Voulez-vous détruire cet appareil ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text1"
+            android:layout_weight="0.18"
+            android:textAlignment="center" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="242dp" >
+
+            <RadioButton
+                android:text="Oui, je le veux."
+                android:checked="true"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:id="@+id/reponseA"
+                android:textAlignment="inherit"
+                android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton
+                android:text="Biensûr, j'en rachèterais un autre."
+                android:layout_width="match_parent"
+                android:layout_height="79dp"
+                android:id="@+id/reponseB"
+                android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton
+                android:text="Ma maman m'a dit que j'peux !"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:id="@+id/reponseC"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text3"
+            android:layout_weight="0.18"
+            android:textAlignment="center"
+            tools:textColor="@android:color/holo_red_dark"
+            android:textColor="@android:color/holo_red_dark" />
+
+    </LinearLayout>
+</RelativeLayout>

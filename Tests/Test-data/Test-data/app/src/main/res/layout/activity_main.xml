@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="mi1.test_data.MainActivity">
+
+    <TextView
+        android:id="@+id/valeur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nan"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plus"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="40dp"
+        android:onClick="onChangeValeur"/>
+
+    <Button
+        android:id="@+id/moins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/moins"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="40dp"
+        android:onClick="onChangeValeur"/>
+
+</RelativeLayout>

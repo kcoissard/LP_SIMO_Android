@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="tabata.sporttimerbis.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:background="@android:color/background_dark">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp">
+
+            <TextView
+                android:text="Tabata Sport Timer by C.K."
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/titreTabata"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:background="@color/colorAccent"
+                android:textColor="@android:color/background_dark"
+                android:fontFamily="casual"
+                android:paddingTop="5dp"
+                android:layout_marginBottom="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="303dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Cycles :"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titreTabata"
+                        android:layout_toLeftOf="@+id/titreTabata"
+                        android:layout_toStartOf="@+id/titreTabata"
+                        android:id="@+id/labelCycles"
+                        android:textAlignment="viewEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="0.01"
+                        android:textColor="@color/colorAccent" />
+
+                    <TextView
+                        android:text="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/labelCycles"
+                        android:layout_alignRight="@+id/titreTabata"
+                        android:layout_alignEnd="@+id/titreTabata"
+                        android:id="@+id/valeurCycles"
+                        android:layout_weight="0.01"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <Button
+                        android:text="+"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button9"
+                        android:onClick="onClickBoutonPlusCycles"
+                        android:background="@drawable/shape"
+                        android:layout_alignBaseline="@+id/valeurCycles"
+                        android:layout_alignBottom="@+id/valeurCycles"
+                        android:layout_toRightOf="@+id/valeurCycles"
+                        android:layout_toEndOf="@+id/valeurCycles"
+                        android:layout_width="45dp"
+                        android:textColor="@color/colorAccent"
+                        android:layout_weight="0.00" />
+
+                    <Button
+                        android:text="-"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button10"
+                        android:onClick="onClickBoutonMoinsCycles"
+                        android:background="@drawable/shape2"
+                        android:layout_alignBaseline="@+id/button2"
+                        android:layout_alignBottom="@+id/button2"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="45dp"
+                        android:textColor="@color/colorAccent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Temps d'effort :"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/labelTempsEffort"
+                        android:gravity="center"
+                        android:layout_below="@+id/labelTempsEffort"
+                        android:layout_alignLeft="@+id/labelTempsEffort"
+                        android:layout_alignStart="@+id/labelTempsEffort"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/colorAccent"
+                        android:layout_weight="0.89" />
+
+                    <TextView
+                        android:text="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/labelTempsEffort"
+                        android:layout_alignLeft="@+id/valeurTempsEffort"
+                        android:layout_alignStart="@+id/valeurTempsEffort"
+                        android:id="@+id/valeurTempsEffort"
+                        android:layout_weight="0.51"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <Button
+                        android:text="+"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button13"
+                        android:onClick="onClickBoutonPlusTempsEffort"
+                        android:background="@drawable/shape"
+                        android:layout_alignBaseline="@+id/valeurTempsEffort"
+                        android:layout_alignBottom="@+id/valeurTempsEffort"
+                        android:layout_toRightOf="@+id/valeurTempsEffort"
+                        android:layout_toEndOf="@+id/valeurTempsEffort"
+                        android:layout_width="45dp"
+                        android:textColor="@color/colorAccent"/>
+
+                    <Button
+                        android:text="-"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button12"
+                        android:onClick="onClickBoutonMoinsTempsEffort"
+                        android:background="@drawable/shape2"
+                        android:layout_below="@+id/button2"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="45dp"
+                        android:textColor="@color/colorAccent"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Temps de pause :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/LabelTempsPause"
+                        android:layout_below="@+id/labelTempsPause"
+                        android:layout_alignLeft="@+id/labelTempsPause"
+                        android:layout_alignStart="@+id/labelTempsPause"
+                        android:layout_weight="0.14"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/colorAccent" />
+
+                    <TextView
+                        android:text="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/labelTempsPause"
+                        android:layout_alignRight="@+id/valeurTempsPause"
+                        android:layout_alignEnd="@+id/valeurTempsPause"
+                        android:id="@+id/valeurTempsPause"
+                        android:layout_weight="0.55"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <Button
+                        android:text="+"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button14"
+                        android:onClick="onClickBoutonPlusTempsPause"
+                        android:background="@drawable/shape"
+                        android:layout_below="@+id/tempsPausePlus"
+                        android:layout_toRightOf="@+id/valeurTempsPause"
+                        android:layout_toEndOf="@+id/valeurTempsPause"
+                        android:layout_width="45dp"
+                        android:textColor="@color/colorAccent"/>
+
+                    <Button
+                        android:text="-"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button15"
+                        android:onClick="onClickBoutonMoinsTempsPause"
+                        android:background="@drawable/shape2"
+                        android:layout_below="@+id/tempsPauseMoins"
+                        android:layout_toRightOf="@+id/tempsPauseMoins"
+                        android:layout_toEndOf="@+id/tempsPauseMoins"
+                        android:layout_width="45dp"
+                        android:textColor="@color/colorAccent"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="Temps total :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/labelTempsPause"
+                        android:layout_alignLeft="@+id/labelTempsPause"
+                        android:layout_alignStart="@+id/labelTempsPause"
+                        android:gravity="center"
+                        android:id="@+id/labelTempsTotal"
+                        android:layout_weight="0.99"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:text="00:00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/labelTempsTotal"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="13dp"
+                        android:layout_marginEnd="13dp"
+                        android:id="@+id/valeurTempsTotal"
+                        android:layout_alignLeft="@+id/tempsPausePlus"
+                        android:layout_alignStart="@+id/tempsPausePlus"
+                        android:textAlignment="center"
+                        android:layout_alignTop="@+id/labelTempsTotal"
+                        android:textColor="@color/colorAccent"
+                        android:layout_weight="1.12"
+                        android:textColorLink="?attr/actionMenuTextColor"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="117dp"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="293dp"
+                android:layout_height="126dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.80">
+
+                    <TextView
+                        android:text="00 : 00 : 00"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:id="@+id/timerValue"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="30sp"
+                        android:background="@color/fond_timer" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="273dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.02">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.34">
+
+                        <Button
+                            android:text="Commencer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/startButton"
+                            android:onClick="onStart"
+                            style="@style/Widget.AppCompat.Button"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toLeftOf="@+id/startButton"
+                            android:layout_toStartOf="@+id/startButton"
+                            android:layout_weight="1.34"
+                            android:background="@android:drawable/progress_horizontal"
+                            android:textColor="@color/colorAccent" />
+
+                        <Button
+                            android:text="Pause"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/pauseButton"
+                            android:onClick="onPause"
+                            android:layout_alignBaseline="@+id/pauseButton"
+                            android:layout_alignBottom="@+id/pauseButton"
+                            android:layout_toLeftOf="@+id/pauseButton"
+                            android:layout_toStartOf="@+id/pauseButton"
+                            android:layout_weight="1.34"
+                            android:textColor="@color/colorAccent"
+                            android:background="@android:drawable/progress_horizontal" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
